@@ -1,0 +1,174 @@
+@font-face {
+  font-family: "Figtree"; /* Choose a descriptive name for your font */
+  src: url("./assets/fonts/Figtree-VariableFont_wght.ttf"),
+    url("./assets/fonts/Figtree-Italic-VariableFont_wght.ttf");
+}
+
+:root {
+  /* colors */
+  --clr-yellow: hsl(47, 88%, 63%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-gray-500: hsl(0, 0%, 42%);
+  --clr-gray-950: hsl(0, 0%, 7%);
+
+  --ff-primary: "Figtree", sans-serif;
+
+  /* -- Font Weights -- */
+  /* Note: 'Medium' is typically 500 and 'Extra Bold' is 800 for Google Fonts */
+  --fw-medium: 500;
+  --fw-extra-bold: 800;
+
+  /* -- Font Sizes (converted to rem for scalability) -- */
+  --fs-xl: 1.5rem; /* 24px */
+  --fs-base: 1rem; /* 16px */
+  --fs-sm: 0.875rem; /* 14px */
+
+  /* -- Line Height -- */
+  --lh-default: 1.5; /* 150% */
+
+  /* -- Letter Spacing -- */
+  --ls-default: 0px;
+
+  /* 
+  --------------------------------- 
+  SPACING (converted to rem)
+  --------------------------------- 
+  */
+  --space-300: 1.5rem; /* 24px */
+  --space-150: 0.75rem; /* 12px */
+  --space-100: 0.5rem; /* 8px */
+  --space-50: 0.25rem; /* 4px */
+}
+
+* {
+  box-sizing: border-box;
+  font-family: var(--ff-primary);
+  margin: 0;
+}
+
+.main-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+
+  /* It's also good practice to remove default body margin */
+  margin: 0;
+  background-color: var(
+    --clr-yellow
+  ); /* I added a background color to show it works */
+}
+
+.container {
+  /* align-self: center; */
+  width: 24rem;
+  height: calc(522 / 16 * 1rem);
+  gap: calc(24 / 16 * 1rem);
+  padding: calc(24 / 16 * 1rem);
+  border: 1px solid var(--clr-gray-950);
+  border-radius: 20px;
+  background-color: var(--clr-white);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 8px 8px #000000;
+  transition: 0.3s ease-in-out;
+}
+
+.container:hover {
+  box-shadow: 16px 16px #000000;
+}
+
+.container__illustration-article {
+  width: 100%;
+  height: calc(200 / 16 * 1rem);
+  border-radius: 10px;
+  background-color: var(--clr-yellow);
+}
+
+.container__content {
+  display: flex;
+  width: 100%;
+  height: auto;
+  gap: var(--space-150);
+  /* border: 1px solid var(--clr-gray-500); */
+}
+
+.container__avatar {
+  width: auto;
+  height: auto;
+  /* border: 1px solid var(--clr-gray-500); */
+  align-self: flex-start;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.content__category {
+  width: auto;
+  height: auto;
+  padding: var(--space-50) var(--space-150);
+  background-color: var(--clr-yellow);
+  align-self: flex-start;
+  color: var(--clr-gray-950);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-extra-bold);
+  border-radius: 4px;
+}
+
+.content__date {
+  width: auto;
+  height: auto;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-default);
+  color: var(--clr-gray-950);
+}
+
+.content__title a {
+  color: var(--clr-gray-950);
+  font-weight: var(--fw-extra-bold);
+  font-size: var(--fs-xl);
+  width: 100%;
+  height: auto;
+  text-decoration: none;
+}
+
+.content__title a:hover {
+  color: var(--clr-yellow);
+  cursor: pointer;
+}
+
+.content__description {
+  color: var(--clr-gray-500);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-default);
+}
+
+.container__avatar {
+  display: flex;
+  gap: var(--space-150);
+}
+
+.avatar__userpic {
+  width: 32px;
+  height: 32px;
+}
+
+.avatar__authorname {
+  font-weight: var(--fw-extra-bold);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-default);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stripes {
+  height: 100vh;
+  width: 5rem;
+  background-color: var(--clr-gray-500);
+}
