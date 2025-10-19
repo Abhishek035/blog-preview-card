@@ -1,0 +1,1 @@
+You can find the finished project at [Frontend Mentor - Blog preview card](https://abhishek035.github.io/blog-preview-card/).
